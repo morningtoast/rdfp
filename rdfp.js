@@ -182,7 +182,6 @@ googletag.cmd = googletag.cmd || [];
 
     // Define public
     Rdfp.register = local.register;
-    Rdfp.refresh  = local.refresh;
     Rdfp.deliver  = init;
 
 }).call(this);    
