@@ -1,6 +1,4 @@
 #Responsive DFP Delivery (RDFP)
-====
-
 The purpose of this class is to allow for delivery of different DFP ads based on screen size. No framework required.
 
 RDFP treats responsive handling per-device, not browser squeezing. This means that ads will not change as you change browser size on your desktop. This is intended to help with responsive design per-device which have fixed-width sizes. For example, RDFP will serve a small ad on a phone but a big ad on the desktop using the same markup.
@@ -8,7 +6,7 @@ RDFP treats responsive handling per-device, not browser squeezing. This means th
 RDFP requires data from your DFP account, such as your Network ID number and ad names.
 
 ##Dependencies
-RDFP does not have any other framework dependencies but will wortk with the likes of jQuery, Prototype, etc.
+RDFP does not have any other framework dependencies but will work with the likes of jQuery, Prototype, etc.
 
 ##How to use RDFP
 RDFP uses data attributes on HTML elements combined with custom slot definitions to determine which ad to deliver.
@@ -16,7 +14,7 @@ RDFP uses data attributes on HTML elements combined with custom slot definitions
 ###Markup
 Place an element where you want your ad to display and give it a class name. Then give it a data attribute called `ads` that has a value of a comma-separate list of ad slots that qualify for that space.
 
-  <div class="placeadhere" data-ads="square,leader"></div>
+    <div class="placeadhere" data-ads="square,leader"></div>
   
 In this example, we want to load either the ad "square" or "leader", whichever one qualifies based on screen size.
 
@@ -26,8 +24,8 @@ You need to tell RDFP which ad slots you're going to be using and provide with d
 
 Syntax: `Rdfp.register(str slotName, int maxScreenWidth, str googleAdId, array adSize);`
 
-  Rdfp.register("square", 0, "RDFP_Demo_300", [300,250]);
-  Rdfp.register("leader", 600, "RLD_Demo_728", [728,90]);
+    Rdfp.register("square", 0, "RDFP_Demo_300", [300,250]);
+    Rdfp.register("leader", 600, "RLD_Demo_728", [728,90]);
   
 In this example, we're defining two slots: "square" and "leader".
 - The "square" ad should be used when the screen size is greater than zero
@@ -45,7 +43,7 @@ After your ad slots are defined you can deliver the ads. Use the `deliver()` fun
 
 Syntax: `Rdfp.deliver(int dfpNetworkId, str className)`
 
-  Rdfp.deliver(1067507, "placeadhere");
+    Rdfp.deliver(1067507, "placeadhere");
   
 The first argument is your Google DFP Network Code number. You'll see this number when you generate tags in DFP or when you click "Admin" from the DFP dashboard.
 
