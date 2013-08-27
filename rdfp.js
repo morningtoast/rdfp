@@ -173,7 +173,7 @@ googletag.cmd = googletag.cmd || [];
                 if (active) {
                     debug(". Using slot "+active.id);
                     cache.slots.push(active);
-                    adEl.innerHTML = '<div id="'+active.dom+'" style="width:'+active.gwh[0]+'px;height:'+active.gwh[1]+'px;'+cache.loaderCss+'" data-slot="'+active.id+'"></div>';
+                    adEl.innerHTML = '<div id="'+active.dom+'" class="rdfp" style="width:'+active.gwh[0]+'px;height:'+active.gwh[1]+'px;'+cache.loaderCss+'" data-slot="'+active.id+'"></div>';
                 }
             }
 
